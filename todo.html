@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="todo-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-wrapper">
+            <header class="header">
+                <h1>My To-Do List</h1>
+                <p class="subtitle">Stay organized and productive</p>
+            </header>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Add a new task..."
+                        autocomplete="off"
+                    >
+                    <button id="addBtn" class="add-btn">Add Task</button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Total Tasks:</span>
+                    <span class="stat-value" id="totalTasks">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Completed:</span>
+                    <span class="stat-value" id="completedTasks">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Progress:</span>
+                    <span class="stat-value" id="progressPercent">0%</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <ul class="todo-list" id="todoList">
+                <!-- To-do items will be inserted here -->
+            </ul>
+
+            <div class="empty-state" id="emptyState">
+                <p>No tasks yet. Add one to get started! 🚀</p>
+            </div>
+
+            <div class="actions">
+                <button id="clearCompletedBtn" class="secondary-btn">Clear Completed</button>
+                <button id="clearAllBtn" class="secondary-btn danger">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="todo-script.js"></script>
+</body>
+</html>
